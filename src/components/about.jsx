@@ -21,24 +21,24 @@ export default function About() {
   }, [showWork]);
 
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-wrap justify-evenly gap-12">
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
           {/* === Education Card === */}
           <div
             onMouseEnter={() => setShowEducation(true)}
-            className="group w-full md:w-[40%] max-w-md relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden transform transition-all duration-700 hover:-translate-y-2 hover:shadow-pink-400 hover:shadow-[0_0_20px]"
+            className="group w-full md:w-1/2 bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/20 relative overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:shadow-pink-400 hover:shadow-[0_0_20px]"
           >
             {/* Pink Overlay */}
             {!showEducation && (
-              <div className="absolute inset-0 bg-pink-400/20 backdrop-blur-sm flex items-center justify-center transition-all duration-1000 z-10">
-                <h3 className="text-2xl font-semibold text-white">Education</h3>
+              <div className="absolute inset-0 bg-pink-400/20 backdrop-blur-sm flex items-center justify-center z-10 transition-all duration-1000">
+                <h3 className="text-xl font-semibold text-white">Education</h3>
               </div>
             )}
 
-            {/* Content Reveal */}
+            {/* Content */}
             <div
-              className={`transition-all duration-1000 relative z-20 text-white space-y-2 text-md ${
+              className={`relative z-20 text-white space-y-2 text-md transition-all duration-1000 ${
                 showEducation ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
@@ -56,18 +56,18 @@ export default function About() {
           {/* === Work Card === */}
           <div
             onMouseEnter={() => setShowWork(true)}
-            className="group w-full md:w-[40%] max-w-md relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden transform transition-all duration-700 hover:-translate-y-2 hover:shadow-pink-400 hover:shadow-[0_0_20px]"
+            className="group w-full md:w-1/2 bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/20 relative overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:shadow-pink-400 hover:shadow-[0_0_20px]"
           >
             {/* Pink Overlay */}
             {!showWork && (
-              <div className="absolute inset-0 bg-pink-400/20 backdrop-blur-sm flex items-center justify-center transition-all duration-1000 z-10">
-                <h3 className="text-2xl font-semibold text-white">Experience</h3>
+              <div className="absolute inset-0 bg-pink-400/20 backdrop-blur-sm flex items-center justify-center z-10 transition-all duration-1000">
+                <h3 className="text-xl font-semibold text-white">Experience</h3>
               </div>
             )}
 
-            {/* Content Reveal */}
+            {/* Content */}
             <div
-              className={`transition-all duration-1000 relative z-20 text-white space-y-2 text-md ${
+              className={`relative z-20 text-white space-y-2 text-md transition-all duration-1000 ${
                 showWork ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
@@ -78,7 +78,6 @@ export default function About() {
               <p>Worked with Kubernetes, CI/CD, Docker, Java, SpringBoot</p>
             </div>
           </div>
-          
         </div>
       </div>
     </section>

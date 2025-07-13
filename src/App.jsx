@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import Hero from './components/hero';
 import About from './components/about';
 import TechStack from './components/techstack';
+import Projects from './components/projects';
 import Contact from './components/contact';
 import Footer from './components/footer';
 
@@ -28,6 +29,7 @@ function App() {
           <Hero />
           <TechStack />
           <About />
+          <Projects />
           <Contact />
           <Footer />
         </main>
